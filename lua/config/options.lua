@@ -1,3 +1,8 @@
+-- keymap -- 
+
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- config/options.lua
 local opt = vim.opt
 
