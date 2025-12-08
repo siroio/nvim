@@ -170,9 +170,9 @@ return {
                 theme = rei_theme,
                 icons_enabled = true,
                 globalstatus = true,
-                -- セパレータはパワーライン系でシンプルに
-                component_separators = { left = "", right = "" },
-                section_separators   = { left = "", right = "" },
+                -- シャープなエッジでパネル感を出す
+                component_separators = { left = "│", right = "│" },
+                section_separators   = { left = "", right = "" },
                 disabled_filetypes = {
                     statusline = { "alpha", "starter", "dashboard" },
                     winbar = {},
@@ -184,7 +184,7 @@ return {
                     {
                         "mode",
                         icon = "",
-                        separator = { left = "", right = "" },
+                        separator = { left = "", right = "" },
                         right_padding = 2,
                     },
                 },
@@ -251,7 +251,7 @@ return {
                         "encoding",
                         fmt = string.upper,
                         padding = { left = 1, right = 1 },
-                        separator = { left = "", right = "" },
+                        separator = { left = "", right = "" },
                         cond = function()
                             return vim.o.columns > 100
                         end,
@@ -273,7 +273,7 @@ return {
                 },
 
                 lualine_z = {
-                    { file_location, separator = { left = "", right = "" } },
+                    { file_location, separator = { left = "", right = "" } },
                 },
             },
 
