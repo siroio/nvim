@@ -1,9 +1,14 @@
 local ok_mason, mason_lspconfig = pcall(require, "mason-lspconfig")
-local ok_cmp, cmp_lsp = pcall(require, "cmp_nvim_lsp")
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-if ok_cmp then
-    capabilities = cmp_lsp.default_capabilities(capabilities)
+
+local ok_blink, blink = pcall(require, "blink.cmp")
+if ok_blink then
+    capabilities = vim.tbl_deep_extend(
+        "force",
+        capabilities,
+        blink.get_lsp_capabilities()
+    )
 end
 
 local function on_attach(client, bufnr)

@@ -1,11 +1,10 @@
 return {
     {
-        "xiyaowong/transparent.nvim",
+        'tribela/transparent.nvim',
         lazy = false,
         priority = 1000,
         config = function()
-            vim.g.rei_transparent = true
-            vim.cmd.colorscheme("rei")
+            require("config.colorscheme")
         end,
     },
 }

@@ -130,3 +130,13 @@ set("TelescopeBorder", { fg = palette.panel_alt, bg = panel })
 set("TelescopeSelection", { bg = pmenu_sel })
 set("TelescopeMatching", { fg = palette.blue_alt, bold = true })
 set("TelescopePromptPrefix", { fg = palette.blue })
+
+set("WinSeparator", { fg = palette.blue_alt, bg = panel })
+set("VertSplit", { fg = palette.blue_alt, bg = panel })
+
+set("FloatBorder", { fg = palette.blue_alt, bg = panel })
+set("FloatTitle", { fg = palette.blue_alt, bg = panel, bold = true })
+
+set("LazyNormal", { fg = palette.fg, bg = panel })
+set("LazyBorder", { fg = palette.blue_alt, bg = panel })
+
