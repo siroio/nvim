@@ -26,6 +26,10 @@ blink.setup({
 
         ['<C-Space>'] = { 'show', 'fallback' },
 
+        -- Enterで補完確定
+        ['<CR>'] = { 'accept', 'fallback' },
+
+        -- Tabで次の候補に移動
         ['<Tab>'] = {
             function(cmp)
                 if cmp.snippet_active() then
@@ -33,7 +37,7 @@ blink.setup({
                 end
 
                 if cmp.is_menu_visible() then
-                    return cmp.select_and_accept()
+                    return cmp.select_next()
                 end
 
                 return true
@@ -41,6 +45,7 @@ blink.setup({
             'fallback',
         },
 
+        -- Shift+Tabで前の候補に移動
         ['<S-Tab>'] = {
             function(cmp)
                 if cmp.snippet_active() then
