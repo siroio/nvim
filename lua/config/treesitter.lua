@@ -1,6 +1,4 @@
-local configs = require("nvim-treesitter.configs")
-
-configs.setup({
+require("nvim-treesitter").setup({
     highlight = {
         enable = true,
     },
@@ -8,4 +6,3 @@ configs.setup({
         enable = true,
     },
 })
-
