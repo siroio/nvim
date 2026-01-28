@@ -12,7 +12,7 @@ telescope.setup({
             "--smart-case",
         },
         initial_mode = "insert",
-        prompt_prefix = "  ",  -- Search icon
+        prompt_prefix = "  ",  -- Search icon
         selection_caret = "> ",  -- > icon for selection
         entry_prefix = "  ",
         scroll_strategy = "limit",

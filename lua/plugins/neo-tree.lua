@@ -10,6 +10,6 @@ return {
     config = function()
       require("config.neo-tree")
     end,
-    lazy = false, -- neo-tree will lazily load itself
+    lazy = false,
   }
 }

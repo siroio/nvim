@@ -251,7 +251,7 @@ lualine.setup({
         theme = custom_theme(),
         disabled_filetypes = { statusline = { "alpha", "dashboard", "starter" } },
         component_separators = "",
-        section_separators = { left = "", right = "" },
+        section_separators = { left = "", right = "" },
     },
     sections = {
         lualine_a = { "mode" },
