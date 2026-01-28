@@ -1,22 +1,22 @@
 require("catppuccin").setup({
-    flavour = "mocha", -- latte, frappe, macchiato, mocha
-    background = { -- :h background
+    flavour = "mocha",
+    background = {
         light = "latte",
         dark = "mocha",
     },
-    transparent_background = false, -- disables setting the background color.
-    show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
-    term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
+    transparent_background = false,
+    show_end_of_buffer = false,
+    term_colors = true,
     dim_inactive = {
-        enabled = false, -- dims the background color of inactive window
+        enabled = false,
         shade = "dark",
-        percentage = 0.15, -- percentage of the shade to apply
+        percentage = 0.15,
     },
-    no_italic = false, -- Force no italic
-    no_bold = false, -- Force no bold
-    no_underline = false, -- Force no underline
-    styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-        comments = { "italic" }, -- Change the style of comments
+    no_italic = false,
+    no_bold = false,
+    no_underline = false,
+    styles = {
+        comments = { "italic" },
         conditionals = { "italic" },
         loops = {},
         functions = {},
@@ -30,7 +30,6 @@ require("catppuccin").setup({
         operators = {},
     },
     color_overrides = {},
-    custom_highlights = {},
     integrations = {
         cmp = true,
         gitsigns = true,
@@ -41,8 +40,28 @@ require("catppuccin").setup({
             enabled = true,
             indentscope_color = "",
         },
-        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+        telescope = { enabled = true, style = "nvchad" },
     },
+    custom_highlights = function(colors)
+        return {
+            TelescopeBorder = { fg = colors.mantle, bg = colors.mantle },
+            TelescopeNormal = { bg = colors.mantle },
+            TelescopeSelection = { fg = colors.text, bg = colors.surface0, bold = true },
+            TelescopeSelectionCaret = { fg = colors.green, bg = colors.surface0 },
+            TelescopePromptBorder = { fg = colors.surface0, bg = colors.surface0 },
+            TelescopePromptNormal = { fg = colors.text, bg = colors.surface0 },
+            TelescopePromptPrefix = { fg = colors.green, bg = colors.surface0 },
+            TelescopePromptTitle = { fg = colors.base, bg = colors.green, bold = true },
+            TelescopePromptCounter = { fg = colors.overlay1, bg = colors.surface0 },
+            TelescopeResultsBorder = { fg = colors.mantle, bg = colors.mantle },
+            TelescopeResultsNormal = { bg = colors.mantle },
+            TelescopeResultsTitle = { fg = colors.base, bg = colors.blue, bold = true },
+            TelescopePreviewBorder = { fg = colors.mantle, bg = colors.mantle },
+            TelescopePreviewNormal = { bg = colors.mantle },
+            TelescopePreviewTitle = { fg = colors.base, bg = colors.teal, bold = true },
+            TelescopeMatching = { fg = colors.lavender },
+        }
+    end,
 })
 
 -- setup must be called before loading

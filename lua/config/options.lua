@@ -44,11 +44,11 @@ opt.updatetime = 300 -- CursorHold などの発火までの時間
 opt.timeoutlen = 400 -- マッピング待ち時間少し短め
 
 -- === 透明背景ハイライト ===
-vim.cmd([[
-    highlight Normal guibg=none
-    highlight NonText guibg=none
-    highlight Normal ctermbg=none
-    highlight NonText ctermbg=none
-    highlight NormalNC guibg=none
-    highlight NormalSB guibg=none
-]])
+-- vim.cmd([[
+--     highlight Normal guibg=none
+--     highlight NonText guibg=none
+--     highlight Normal ctermbg=none
+--     highlight NonText ctermbg=none
+--     highlight NormalNC guibg=none
+--     highlight NormalSB guibg=none
+-- ]])
