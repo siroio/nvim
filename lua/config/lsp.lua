@@ -42,6 +42,15 @@ vim.lsp.config("lua_ls", {
     },
 })
 
+vim.lsp.config("dotrush", {
+    cmd = { vim.fn.stdpath("data") .. "/dotrush/DotRush.exe" },
+    filetypes = { "cs", "xaml" },
+    root_markers = { "*.sln", "*.csproj", ".git" },
+    capabilities = capabilities,
+    on_attach = on_attach,
+})
+vim.lsp.enable("dotrush")
+
 if ok_mason then
     mason_lspconfig.setup()
 
