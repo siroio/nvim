@@ -15,6 +15,7 @@ opt.cursorline = true      -- カーソル行ハイライト
 opt.wrap = false           -- 行の折り返しなし
 opt.scrolloff = 4          -- 上下に余白を残してスクロール
 opt.winborder = "single"   -- Floating Windowにボーターをつける
+opt.conceallevel = 2       -- ObsidianのSyntax/UI用の設定
 
 -- === インデント / タブ設定 ===
 opt.expandtab = true   -- Tab をスペースに変換
@@ -37,7 +38,7 @@ opt.splitbelow = true -- 水平分割は下に開く
 opt.mouse = "a"               -- どのモードでもマウス使用可
 opt.clipboard = "unnamedplus" -- システムクリップボード共有
 opt.undofile = true           -- undo 履歴をファイル保存
-opt.swapfile = false          -- swap ファイル無効（好み）
+opt.swapfile = false          -- swap ファイル無効
 
 -- === パフォーマンス系 ===
 opt.updatetime = 300 -- CursorHold などの発火までの時間

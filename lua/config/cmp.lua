@@ -39,8 +39,6 @@ blink.setup({
                 if cmp.is_menu_visible() then
                     return cmp.select_next()
                 end
-
-                return true
             end,
             'fallback',
         },
@@ -55,8 +53,6 @@ blink.setup({
                 if cmp.is_menu_visible() then
                     return cmp.select_prev()
                 end
-
-                return true
             end,
             'fallback',
         },
